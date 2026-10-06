@@ -1,42 +1,48 @@
-/* Typography */
+:root {
+  --dark-blue: #1e3a8a;
+  --blue: #2563eb;
+  --text: #333;
+  --background: #f2f2f2;
+}
+
+
 body {
-  font-family: Arial, sans-serif;
-  color: #333;
-  background-color: #f2f2f2;
   margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  background-color: var(--background);
 }
 
 h1, h2 {
-  color: #1e3a8a;
+  color: var(--dark-blue);
 }
 
-/* Header and footer */
+
 header, footer {
-  background-color: #1e3a8a;
-  color: white;
-  text-align: center;
   padding: 20px;
-}
-
-header h1 {
-  color: white;
-  margin: 0;
-}
-
-/* Navigation */
-nav {
-  background-color: #2563eb;
   text-align: center;
+  background-color: var(--dark-blue);
+}
+
+header h1, footer p {
+  margin: 0;
+  color: white;
+}
+
+
+nav {
   padding: 10px;
+  text-align: center;
+  background-color: var(--blue);
 }
 
 nav a {
+  margin: 0 15px;
   color: white;
   text-decoration: none;
-  margin: 0 15px;
 }
 
-/* Layout */
+
 .container {
   display: flex;
   gap: 20px;
@@ -50,12 +56,13 @@ main {
 
 aside {
   flex: 1;
+  align-self: flex-start;
 }
 
-/* Box model: padding, border, margin */
+
 section, article, aside {
-  background-color: white;
   padding: 15px;
-  border: 2px solid #2563eb;
   margin-bottom: 15px;
+  border: 2px solid var(--blue);
+  background-color: white;
 }
